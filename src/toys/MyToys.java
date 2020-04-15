@@ -20,9 +20,11 @@ public class MyToys {
         if(n == 0)
             return 1;
         long product = 1;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             product *= i;
         }
         return product;
+        //bữa sau đệ quy vì kết hợp với CI Continuous
+            //Integration
     }
 }

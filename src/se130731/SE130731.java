@@ -18,7 +18,10 @@ public class SE130731 {
      */
     public static void main(String[] args) {
         System.out.println("5! = " + MyToys.cf(5));
-        System.out.println("6! = " + MyToys.cf(6));
+        System.out.println("6! = " + MyToys.cf(6)); //expected 730
+        System.out.println("0! = " + MyToys.cf(0));
+        System.out.println("-5!= " + MyToys.cf(-5));// vỡ mặt
+        
     }
     
 }
