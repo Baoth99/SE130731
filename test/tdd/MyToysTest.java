@@ -25,7 +25,7 @@ public class MyToysTest {
     @Test //biên hàm này thành hàm main
     public void testSuccessfullCases() {
         assertEquals(1, cf(0));
-        assertEquals(20, cf(2));
+        assertEquals(2, cf(2));
         assertEquals(6, cf(3));
         assertEquals(24, cf(4));
         assertEquals(720, cf(6));
