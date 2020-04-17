@@ -23,23 +23,34 @@ public class MyToysTest {
     //vơi skif vọng
     //tình huống test với 1 bộ data cho sẵn xem kq trẻ về -> Test Case(Tình huống test)
     @Test //biên hàm này thành hàm main
-    public void testSuccessfullCases() {
-        assertEquals(1, cf(0));
+    public void testSuccessfulUpper10Cases() {
+        assertEquals(3_628_800, cf(10));
+        assertEquals(39_916_800, cf(11));
+    }
+
+    
+    @Test //biên hàm này thành hàm main
+    public void testSuccessfulLowerCases() {
+        assertEquals(10, cf(0));
         assertEquals(2, cf(2));
         assertEquals(6, cf(3));
         assertEquals(24, cf(4));
         assertEquals(720, cf(6));
     }
-
     //ngoại lệ/Exception không đc xem là 1 value để so sánh
     //không là value thì không thể dùng hàm assertEquals(yêu cầu có các value cụ thể)
     @Test(expected = IllegalArgumentException.class) //try catch đó em
-    public void testExceptionCases() {
+    public void testExceptionPositiveCases() {
         cf(-5);
+    }
+    
+    @Test(expected = IllegalArgumentException.class) //try catch đó em
+    public void testExceptionNegativeCases() {
+        cf(16);
     }
     //code viết ổn, không sai cú pháp luôn ra đc file .JAR
 
-    //Ép ant, phỉa đảm bảo coede xanh thông đường, pass hết test, không Error về mặt
+    //Ép ant, phải đảm bảo coede xanh thông đường, pass hết test, không Error về mặt
     //giá trị trả về  thì mới Clean and build
     //Jenkins, teamCity,...... là tool, công cụ sinh ra giúp ta những điều ta vừa làm - tay
     //nó tự động hóa giùm
